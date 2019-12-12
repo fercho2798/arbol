@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-usokendo',
+  selector: 'usokendo',
   templateUrl: './usokendo.component.html',
   styleUrls: ['./usokendo.component.css']
 })
