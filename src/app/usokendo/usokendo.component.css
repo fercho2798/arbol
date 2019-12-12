@@ -30,3 +30,6 @@
   .borde{
       border: solid rgb(211, 123, 9);
   }
+  .borde2{
+      border: solid rgb(211, 123, 9) 1px;
+  }
