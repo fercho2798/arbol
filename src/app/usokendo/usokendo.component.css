@@ -26,3 +26,7 @@
     display: inline-block;
     vertical-align: top;
   }
+
+  .borde{
+      border: solid rgb(211, 123, 9);
+  }
