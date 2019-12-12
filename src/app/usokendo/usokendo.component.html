@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="k-block">
-  <button kendoButton [look]="'default'"> default button</button>
+  <button kendoButton [look]="'outline'"> default button</button>
 </div>
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
@@ -31,3 +31,70 @@
     </p>
   </div>
 </div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>Disabled ButtonGroup</p>
+        <kendo-buttongroup [disabled]="disabled">
+            <button
+                kendoButton
+                [toggleable]="true"
+                [disabled]="disabled"
+            >Bold</button>
+            <button
+                kendoButton
+                [toggleable]="true"
+                [disabled]="disabled"
+            >Italic</button>
+            <button
+                kendoButton
+                [toggleable]="true"
+                [disabled]="disabled"
+            >Underline</button>
+        </kendo-buttongroup>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+        <p>ButtonGroup with Disabled Button</p>
+        <kendo-buttongroup>
+            <button
+                kendoButton
+                [toggleable]="true"
+            >Bold</button>
+            <button
+                kendoButton
+                [toggleable]="true"
+                [disabled]="disabled"
+            >Italic</button>
+            <button
+                kendoButton
+                [toggleable]="true"
+            >Underline</button>
+        </kendo-buttongroup>
+    </div>
+</div>
+<button kendoButton (click)="toggleDisabled()" [primary]="true">Toggle Disabled States</button>
+<div class="teamMate">
+    <img [src]="img" alt="Nancy Leverling" />
+    <span
+      class="k-icon k-i-circle status"
+      [ngStyle]="{ color: status }"
+    ></span>
+    <span class="mate-info">
+      <h2>Nancy Leverling</h2>
+      <p>Team Lead</p>
+    </span>
+  </div>
+
+  <kendo-buttongroup [width]="'100%'" [selection]="'single'">
+    <button
+      *ngFor="let button of buttons"
+      kendoButton
+      [toggleable]="true"
+      [selected]="button.selected"
+      (selectedChange)="selectedChange($event, button)"
+    >
+      <span>
+        <span class="k-icon {{ button.icon }}"></span>
+        {{ button.text }}
+      </span>
+    </button>
+  </kendo-buttongroup>
